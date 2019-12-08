@@ -16,7 +16,7 @@ namespace ApiGateway.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            var name = Dns.GetHostName(); // get container id
+            var name = Dns.GetHostName();
             var ip = Dns.GetHostEntry(name).AddressList
                 .FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
 
