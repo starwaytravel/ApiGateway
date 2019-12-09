@@ -20,7 +20,7 @@ namespace ApiGateway.Controllers
             var ip = Dns.GetHostEntry(name).AddressList
                 .FirstOrDefault(x => x.AddressFamily == AddressFamily.InterNetwork);
 
-            return new string[] { "ApiGateway is running", "API Version 1.1.0", "Container ID: " + name + "IP Address: " + ip.ToString() };
+            return new string[] { "ApiGateway is running", "API Version 1.1.0", "Container ID: " + name + " and " + "IP Address: " + ip.ToString() };
         }
 
         [HttpGet("{id}", Name = "Get")]
